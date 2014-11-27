@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+	ServerName laravel4.dev
+	ServerAlias www.laravel4.dev
+
+	DocumentRoot /var/www/laravel4/public/
+	<Directory "/var/www/laravel4/public/">
+		Options +Indexes 
+		#FollowSymLinks MultiViews
+		AllowOverride all
+		Order allow,deny
+		allow from all
+	</Directory>
+	CustomLog /var/log/xyz/laravel4.dev_access_log combined
+	ErrorLog /var/log/xyz/laravel4.dev_log_errors
+</VirtualHost>
